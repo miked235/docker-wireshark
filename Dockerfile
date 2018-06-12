@@ -32,5 +32,5 @@ USER wireshark
 WORKDIR /data/wireshark
 
 ENV NETWORK_INTERFACE=eth0
-
-CMD tshark -i $NETWORK_INTERFACE -T ek > packets.json 
+ENV ARGS=""
+CMD tshark -i $NETWORK_INTERFACE $ARGS -T ek > packets.json 
